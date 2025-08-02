@@ -1,6 +1,6 @@
 import classnames from "classnames"
 import { MouseEventHandler, ReactNode } from "react"
-import "./style.scss"
+import styles from "./Button.module.scss";
 
 type ButtonProps = {
   title: string
@@ -10,10 +10,14 @@ type ButtonProps = {
   onClick: MouseEventHandler<HTMLButtonElement>
 }
 
-export const Button = ({ title, icon, outline }: ButtonProps) => {
+export const Button = ({ title, icon, outline, disabled, onClick }: ButtonProps) => {
   return (
-    <button className={classnames(outline && "outline", "button")} >
-      {icon && <span className="icon">{icon}</span>}
+   <button
+      className={classnames(styles.button, outline && styles.outline)}
+      disabled={disabled}
+      onClick={onClick}
+    >
+      {icon && <span className={styles.icon}>{icon}</span>}
       {title}
     </button>
   )

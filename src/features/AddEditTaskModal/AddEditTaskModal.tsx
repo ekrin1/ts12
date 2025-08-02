@@ -3,15 +3,15 @@ import Close from '../../shared/assets/icons/close.svg?react';
 import { Button } from '../../shared/ui/Button/Button';
 import { Input } from '../../shared/ui/Input/Input';
 import { Modal } from '../../shared/ui/Modal/Modal';
-import './style.scss';
+import styles from './AddEditTaskModal.module.scss';
 
 export const AddEditTaskModal = () => {
   return (
     <Modal>
       <form>
-        <div className="add-edit-modal">
-          <div className="flx-between">
-            <span className="modal-title">Добавить задачу</span>
+        <div className={styles.addEditModal}>
+          <div className={styles.flxBetween}>
+            <span className={styles.modalTitle}>Добавить задачу</span>
             <Close className="cp" onClick={() => {}} />
           </div>
           <Input
@@ -21,24 +21,27 @@ export const AddEditTaskModal = () => {
             name="title"
             value=""
           />
-          <div className="modal-priority">
+          <div className={styles.modalPriority}>
             <span>Приортитет</span>
-            <ul className="priority-buttons">
+            <ul className={styles.priorityButtons}>
               {['high', 'medium', 'low'].map((priority) => (
                 <li
                   key={priority}
-                  className={classNames(`${priority}-selected`, priority)}
+                  className={classNames(
+                    styles[`${priority}Selected`],
+                    styles[priority]
+                  )}
                 >
                   {priority}
                 </li>
               ))}
             </ul>
           </div>
-          <div className="flx-right mt-50">
+          <div className={classNames(styles.flxRight, styles.mt50)}>
             <Button title="Добавить" onClick={() => {}} />
           </div>
         </div>
       </form>
-    </Modal>
+</Modal>
   );
 };

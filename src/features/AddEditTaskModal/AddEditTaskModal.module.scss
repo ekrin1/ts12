@@ -1,7 +1,7 @@
 @use '../../styles/index.scss' as *;
 @use '../../styles/breakpoints.scss' as breakpoints;
 
-.add-edit-modal {
+.addEditModal {
   .modal-title {
     font-size: 22px;
     font-weight: 700;
@@ -10,7 +10,7 @@
   }
 }
 
-.modal-priority {
+.modalPriority {
   margin-top: 20px;
   span {
     font-size: 14px;
@@ -19,7 +19,7 @@
   }
 }
 
-.priority-buttons {
+.priorityButtons {
   display: flex;
   gap: 13px;
   margin-top: 12px;

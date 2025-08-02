@@ -1,4 +1,4 @@
-import { Priority, Status } from '../shared/lib/types';
+import { Priority, Status } from '../../lib/types';
 
 export type Task = {
   id: string;

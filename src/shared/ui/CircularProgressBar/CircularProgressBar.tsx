@@ -14,16 +14,21 @@ export const CircularProgressBar = ({ strokeWidth, sqSize, percentage }: Props) 
 
   return (
     <div className={styles.CircularProgressBar}>
-      <svg width={sqSize} height={sqSize} viewBox={viewBox} className="styles.сircularProgressBar">
+      <svg
+          width={sqSize}
+          height={sqSize}
+          viewBox={viewBox}
+          className={styles.circularProgressBar}
+      >
         <circle
-          className="styles.circleBackground"
+          className={styles.circleBackground}
           cx={sqSize / 2}
           cy={sqSize / 2}
           r={radius}
           strokeWidth={`${strokeWidth}px`}
         />
         <circle
-          className="styles.circleProgress"
+          className={styles.circleProgress}
           cx={sqSize / 2}
           cy={sqSize / 2}
           r={radius}

@@ -1,10 +1,10 @@
 import './App.scss';
-import { TodoList } from '../widgets/TodoList/TodoList';
+import { TasksPage } from '../pages/TasksPage/TasksPage';
 
 const App = () => {
   return (
     <div className="container">
-      <TodoList />
+      <TasksPage />
     </div>
   );
 };

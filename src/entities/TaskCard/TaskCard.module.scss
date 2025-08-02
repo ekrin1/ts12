@@ -1,7 +1,7 @@
 @use '../../styles/index.scss' as *;
 @use '../../styles/breakpoints.scss' as breakpoints;
 
-.task-card {
+.taskCard {
   background: $white;
   box-shadow: 0px 6px 58px rgba(196, 203, 214, 0.103611);
   border-radius: 24px;
@@ -16,7 +16,7 @@
   }
 }
 
-.task-title {
+.taskTitle {
   font-size: 14px;
   font-weight: 400;
   color: $secondary-color;
@@ -30,7 +30,7 @@
   color: $primary-color;
 }
 
-.priority-title {
+.priorityTitle {
   font-size: 14px;
   font-weight: 400;
   color: $secondary-color;
@@ -46,17 +46,17 @@
   color: $success-color;
   text-transform: capitalize;
 }
-.priority--high {
+.priorityHigh {
   color: $error-color;
 }
-.priority--medium {
+.priorityMedium {
   color: $warning-color;
 }
-.priority--low {
+.priorityLow {
   color: $success-color;
 }
 
-.task-status-wrapper {
+.taskStatusWrapper {
   width: 100px;
   text-align: center;
   @include breakpoints.devices(sm) {

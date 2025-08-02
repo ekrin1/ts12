@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import "./style.scss"
+import styles from "./Modal.module.scss"
 
 type ModalProps = {
   children: ReactNode;
@@ -7,11 +7,11 @@ type ModalProps = {
 
 export const Modal = ({ children }: ModalProps) => {
   return (
-    <div className="modal">
-      <div className="modal-content">{children}</div>
+    <div className={styles.modal}>
+      <div className={styles.modalContent}>{children}</div>
     </div>
   );
-};
+};;
 
 export default Modal;
 
